@@ -1,0 +1,20 @@
+@import "mixins";
+
+%centerVertical {
+	position: absolute;
+	top: 50%;
+	@include translate(0,-50%);
+}
+
+%centerHorizontal {
+	position: absolute;
+	left: 50%;
+	@include translate(-50%,0);
+}
+
+%marginLeftRightAuto {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}

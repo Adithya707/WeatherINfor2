@@ -1,0 +1,266 @@
+button > span, footer p {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+main, .search-container, .search-container button, .results, .results button, .results .date ul li img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+}
+
+html {
+  background: url(https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/asperitas-cloud-2.jpg) no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+body {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+}
+
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  margin-bottom: 10px;
+  box-shadow: inset 1px 1px 4px #4d4d4d;
+}
+input::placeholder {
+  color: #cccccc;
+  opacity: 1;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #cccccc;
+}
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #cccccc;
+}
+input:focus {
+  outline: 2px solid #40b4e5;
+}
+
+button {
+  position: relative;
+  display: block;
+  height: 2rem;
+  background: #40b4e5;
+  box-shadow: inset 0 0 1px 1px #6dc6eb;
+  border-bottom: 4px solid #1d9ed5;
+  color: white;
+  cursor: pointer;
+}
+button:not(.disabled):hover, button:not(.disabled):focus {
+  top: 2px;
+  border-bottom: 2px solid #1d9ed5;
+}
+button.disabled {
+  background: #ccc;
+  border-bottom: 4px solid #999;
+  box-shadow: inset 0 0 1px 1px #dedede;
+  cursor: default;
+}
+button > span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/****** main content *******/
+main {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  padding: 10px;
+}
+@media only screen and (min-width: 769px) {
+  main {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 991px) {
+  main {
+    width: 80%;
+    max-width: 1100px;
+  }
+}
+
+header {
+  text-align: center;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 769px) {
+  .search-container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.search-container > * {
+  display: block;
+  font-family: "Nunito", sans-serif;
+}
+.search-container label {
+  margin-bottom: 10px;
+}
+.search-container button {
+  width: calc(100% / 3);
+  min-width: 180px;
+  margin-bottom: 10px;
+}
+
+.results {
+  max-width: 470px;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 769px) {
+  .results {
+    max-width: 870px;
+  }
+}
+.results h2 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.results button {
+  width: 250px;
+}
+.results .date {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 4px 6px 10px -2px #333333;
+}
+@media only screen and (min-width: 769px) {
+  .results .date {
+    padding-right: 0;
+  }
+}
+.results .date h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.results .date ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+@media only screen and (min-width: 769px) {
+  .results .date ul {
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 50%;
+  }
+  .results .date ul:nth-of-type(2) {
+    margin-right: -10px;
+  }
+}
+.results .date ul li {
+  position: relative;
+  display: block;
+  width: calc((100% / 4) - 6px);
+  min-height: 152px;
+  background: white;
+  box-shadow: 2px 3px 5px -1px #666666;
+  padding: 4px 1px;
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .results .date ul li {
+    max-width: 95px;
+    min-height: 160px;
+    margin-right: 10px;
+  }
+}
+.results .date ul li > * {
+  display: block;
+}
+.results .date ul li .description {
+  margin-bottom: 5px;
+  line-height: 1.1;
+}
+.results .date ul li p {
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+  text-align: center;
+}
+.results .date ul li p span {
+  display: block;
+}
+.results .date ul li p span.high {
+  color: red;
+}
+.results .date ul li p span.low {
+  color: #40b4e5;
+}
+
+.results .date ul li p span.mid {
+  color: green;
+}
+
+/********* footer **********/
+footer {
+  position: relative;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
+}
+footer p {
+  width: 100%;
+  text-align: center;
+}
+footer p a, footer p a:hover, footer p a:visited {
+  color: #40b4e5;
+}
+
+/*# sourceMappingURL=app.css.map */
